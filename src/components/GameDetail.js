@@ -5,9 +5,10 @@ import {motion} from 'framer-motion'
 // Redux
 import {useSelector} from 'react-redux'
 import {useHistory} from 'react-router-dom'
-
+import {smallImage} from '../util'
 
  const GameDetail=()=> {
+   // track the route 
    const history = useHistory()
    // Exist Detail
    const exitDetailHandler = (e)=> {
@@ -40,14 +41,14 @@ import {useHistory} from 'react-router-dom'
                   </Info>
                </Stats>
                <Media>
-                 <img src={game.background_image} />
+                 <img src={smallImage(game.background_image,1280)} />
                </Media>
                <Description>
                  <p>{game.description_raw}</p>
                </Description>
                <div className="gallery">
                   {screen.results && screen.results.map(screen =>(
-                     <img src={screen.image} key={screen.id} /> 
+                     <img src={smallImage(screen.image,1280)} key={screen.id} /> 
                   ))}
                </div>
            </Detail> 

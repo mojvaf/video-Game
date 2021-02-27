@@ -34,7 +34,7 @@ const Home = ()=>{
        <Game  name={game.name} released={game.released} id={game.id} image={game.background_image}/>
        )}
      </Games>
-     <h2>popular Games</h2>
+     <h2>Popular Games</h2>
      <Games>
        {popular.map(game=>
        <Game  name={game.name} released={game.released} id={game.id} image={game.background_image}/>
