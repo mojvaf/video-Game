@@ -4,6 +4,10 @@ import {gameDetailsURL, gameScreenShotURL} from '../api'
 // action creator 
 
 export const loadDetail = (id)=> async(dispatch)=>{
+
+    dispatch({
+       type: "LOADING_DETAIL"
+    })
   //Fetch Axios
   const  detailData = await axios.get(gameDetailsURL(id))
   const  screenShotDate = await axios.get(gameScreenShotURL(id))
